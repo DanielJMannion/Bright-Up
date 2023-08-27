@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2pw3aqyqcwgh"]
 
-[ext_resource type="Script" path="res://FakeLoading.gd" id="1_fihu3"]
+[ext_resource type="Script" path="res://Assets/Scripts/FakeLoading.gd" id="1_fihu3"]
 [ext_resource type="AudioStream" uid="uid://bmi0loosuc52e" path="res://Assets/Audio/firstNoise.wav" id="2_bktpg"]
 [ext_resource type="AudioStream" uid="uid://21utdjkcphy5" path="res://Assets/Audio/secondNoise.wav" id="3_tgwe1"]
 

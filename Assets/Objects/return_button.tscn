@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b2w6q7ijrm8ad" path="res://Assets/Sprites/BackButton.png" id="1_c0ojf"]
 [ext_resource type="Texture2D" uid="uid://cmrcph0nlnit2" path="res://Assets/Sprites/BackButtonFlip.png" id="2_jwgpj"]
-[ext_resource type="Script" path="res://returnButton.gd" id="3_k7pob"]
+[ext_resource type="Script" path="res://Assets/Scripts/returnButton.gd" id="3_7ovqk"]
 
 [node name="returnButton" type="TextureButton"]
 offset_right = 44.0
@@ -10,4 +10,4 @@ offset_bottom = 20.0
 texture_normal = ExtResource("1_c0ojf")
 texture_pressed = ExtResource("1_c0ojf")
 texture_hover = ExtResource("2_jwgpj")
-script = ExtResource("3_k7pob")
+script = ExtResource("3_7ovqk")

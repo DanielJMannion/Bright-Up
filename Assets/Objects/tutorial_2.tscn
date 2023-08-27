@@ -7,6 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://doirvygcr7vy1" path="res://Assets/Sprites/tutorial2/tutorial6.png" id="5_cntpk"]
 [ext_resource type="Texture2D" uid="uid://b574ahjl2cchw" path="res://Assets/Sprites/tutorial2/tutorial7.png" id="6_12rrp"]
 
+[sub_resource type="Animation" id="Animation_lt278"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_q0vow")]
+}
+
 [sub_resource type="Animation" id="Animation_aefvd"]
 resource_name = "tutorial"
 length = 1.2
@@ -22,21 +37,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("1_q0vow"), ExtResource("2_cb6qn"), ExtResource("3_wn4uf"), ExtResource("4_kikob"), ExtResource("5_cntpk"), ExtResource("6_12rrp")]
-}
-
-[sub_resource type="Animation" id="Animation_lt278"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_q0vow")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cyl23"]
