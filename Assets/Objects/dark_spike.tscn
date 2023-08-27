@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdl0burn7nttp"]
+
+[ext_resource type="Texture2D" uid="uid://h6wis0c3oprw" path="res://Assets/Sprites/darkSprite.png" id="1_5q0bn"]
+[ext_resource type="PackedScene" uid="uid://betffp7n8g2gj" path="res://Assets/Objects/death_box.tscn" id="2_mmxoo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dae7t"]
+size = Vector2(16, 16)
+
+[node name="DarkSpike" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5q0bn")
+
+[node name="DeathBox" parent="." instance=ExtResource("2_mmxoo")]
+collision_layer = 32
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="DeathBox" index="0"]
+shape = SubResource("RectangleShape2D_dae7t")
+
+[editable path="DeathBox"]

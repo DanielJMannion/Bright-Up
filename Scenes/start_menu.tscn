@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1k4y5anykptc"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/start_menu.gd" id="1_86nph"]
+[ext_resource type="Texture2D" uid="uid://br63g46tond8g" path="res://Assets/Sprites/Start Button.png" id="2_17wpd"]
+[ext_resource type="Texture2D" uid="uid://bxa763hlow4lg" path="res://Assets/Sprites/logo.png" id="2_e3gco"]
+[ext_resource type="Texture2D" uid="uid://dwfya7ki88bse" path="res://Assets/Sprites/Start Button Flip.png" id="3_jnlt8"]
+[ext_resource type="Texture2D" uid="uid://b22m2epit2s43" path="res://Assets/Sprites/Quit Button.png" id="4_tu2r1"]
+[ext_resource type="Texture2D" uid="uid://c5uly01pcl3qu" path="res://Assets/Sprites/Quit Button Flip.png" id="5_fhil7"]
+[ext_resource type="PackedScene" uid="uid://cs45fm645debr" path="res://Assets/Objects/lantern.tscn" id="6_xnlw3"]
+[ext_resource type="PackedScene" uid="uid://c36wo7uomkc2c" path="res://Assets/Objects/first_screne.tscn" id="7_lbutf"]
+
+[node name="Start Menu" type="Control"]
+layout_mode = 3
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_86nph")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 257.0
+offset_bottom = 87.0
+texture = ExtResource("2_e3gco")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(3, 3)
+
+[node name="LanternFolder" type="Node2D" parent="."]
+position = Vector2(285, 132)
+
+[node name="Lantern" parent="LanternFolder" instance=ExtResource("6_xnlw3")]
+
+[node name="Lantern2" parent="LanternFolder" instance=ExtResource("6_xnlw3")]
+position = Vector2(55, -33)
+
+[node name="Buttons" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 59.0
+offset_right = 114.0
+offset_bottom = 189.0
+alignment = 1
+vertical = true
+
+[node name="StartButton" type="TextureButton" parent="Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_17wpd")
+texture_pressed = ExtResource("2_17wpd")
+texture_hover = ExtResource("3_jnlt8")
+
+[node name="QuitButton" type="TextureButton" parent="Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("4_tu2r1")
+texture_pressed = ExtResource("4_tu2r1")
+texture_hover = ExtResource("5_fhil7")
+
+[node name="FirstScrene" parent="." instance=ExtResource("7_lbutf")]
+layout_mode = 0

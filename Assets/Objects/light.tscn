@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cytqsyc3hefnh"]
+
+[ext_resource type="Texture2D" uid="uid://0coyfi47nvi1" path="res://Assets/Sprites/light.png" id="1_cer56"]
+[ext_resource type="Script" path="res://Assets/Scripts/light.gd" id="1_ejnxt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rk4de"]
+radius = 24.0
+
+[node name="Light" type="Node2D"]
+script = ExtResource("1_ejnxt")
+
+[node name="PointLight" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 102
+
+[node name="PointLightShape" type="CollisionShape2D" parent="PointLight"]
+shape = SubResource("CircleShape2D_rk4de")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cer56")
+
+[connection signal="area_entered" from="PointLight" to="." method="_on_point_light_area_entered"]
+[connection signal="area_exited" from="PointLight" to="." method="_on_point_light_area_exited"]
+[connection signal="body_entered" from="PointLight" to="." method="_on_point_light_body_entered"]
+[connection signal="body_exited" from="PointLight" to="." method="_on_point_light_body_exited"]

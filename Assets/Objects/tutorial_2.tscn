@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://browheu4fsjxi"]
+
+[ext_resource type="Texture2D" uid="uid://c1w3o20ykuvhi" path="res://Assets/Sprites/tutorial2/tutorial2.png" id="1_q0vow"]
+[ext_resource type="Texture2D" uid="uid://c8umwoyvegkyh" path="res://Assets/Sprites/tutorial2/tutorial3.png" id="2_cb6qn"]
+[ext_resource type="Texture2D" uid="uid://34i00sc20esp" path="res://Assets/Sprites/tutorial2/tutorial4.png" id="3_wn4uf"]
+[ext_resource type="Texture2D" uid="uid://bsuo1jr0l1biw" path="res://Assets/Sprites/tutorial2/tutorial5.png" id="4_kikob"]
+[ext_resource type="Texture2D" uid="uid://doirvygcr7vy1" path="res://Assets/Sprites/tutorial2/tutorial6.png" id="5_cntpk"]
+[ext_resource type="Texture2D" uid="uid://b574ahjl2cchw" path="res://Assets/Sprites/tutorial2/tutorial7.png" id="6_12rrp"]
+
+[sub_resource type="Animation" id="Animation_aefvd"]
+resource_name = "tutorial"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_q0vow"), ExtResource("2_cb6qn"), ExtResource("3_wn4uf"), ExtResource("4_kikob"), ExtResource("5_cntpk"), ExtResource("6_12rrp")]
+}
+
+[sub_resource type="Animation" id="Animation_lt278"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_q0vow")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cyl23"]
+_data = {
+"RESET": SubResource("Animation_lt278"),
+"tutorial": SubResource("Animation_aefvd")
+}
+
+[node name="tutorial2" type="TextureRect"]
+offset_right = 66.0
+offset_bottom = 20.0
+texture = ExtResource("1_q0vow")
+stretch_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "tutorial"
+libraries = {
+"": SubResource("AnimationLibrary_cyl23")
+}

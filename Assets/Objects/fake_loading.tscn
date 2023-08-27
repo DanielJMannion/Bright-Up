@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2pw3aqyqcwgh"]
+
+[ext_resource type="Script" path="res://FakeLoading.gd" id="1_fihu3"]
+[ext_resource type="AudioStream" uid="uid://bmi0loosuc52e" path="res://Assets/Audio/firstNoise.wav" id="2_bktpg"]
+[ext_resource type="AudioStream" uid="uid://21utdjkcphy5" path="res://Assets/Audio/secondNoise.wav" id="3_tgwe1"]
+
+[node name="FakeLoading" type="ColorRect"]
+z_index = 10
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_fihu3")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bktpg")
+volume_db = -15.0
+
+[node name="Audio 2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tgwe1")
+volume_db = -15.0

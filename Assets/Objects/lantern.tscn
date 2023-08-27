@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs45fm645debr"]
+
+[ext_resource type="Texture2D" uid="uid://0coyfi47nvi1" path="res://Assets/Sprites/light.png" id="1_mwh7w"]
+[ext_resource type="Texture2D" uid="uid://b6u84nvkqy3xv" path="res://Assets/Sprites/lantern.png" id="2_f6il2"]
+[ext_resource type="Texture2D" uid="uid://dbllvfeb0n46e" path="res://Assets/Sprites/chain.png" id="3_fosgd"]
+
+[node name="Lantern" type="Node2D"]
+
+[node name="Light" type="Sprite2D" parent="."]
+texture = ExtResource("1_mwh7w")
+
+[node name="Lantern" type="Sprite2D" parent="."]
+texture = ExtResource("2_f6il2")
+
+[node name="Chain" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(-8, -24)
+texture = ExtResource("3_fosgd")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)

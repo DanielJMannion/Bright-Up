@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3alkqk10cscf"]
+
+[ext_resource type="Script" path="res://Assets/Objects/pause.gd" id="1_2amoi"]
+[ext_resource type="PackedScene" uid="uid://ce36g8cxt7r68" path="res://Assets/Objects/return_button.tscn" id="1_ydyad"]
+[ext_resource type="Texture2D" uid="uid://csa0idgp1aqrg" path="res://Assets/Sprites/ResumeButton.png" id="2_gxlcq"]
+[ext_resource type="Texture2D" uid="uid://c2k74wey8teoj" path="res://Assets/Sprites/pauseText.png" id="3_eenbw"]
+[ext_resource type="Texture2D" uid="uid://bs8dsiah50rep" path="res://Assets/Sprites/ResumeButtonFlip.png" id="4_2kxv4"]
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2amoi")
+
+[node name="returnButton" parent="." instance=ExtResource("1_ydyad")]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 138.0
+offset_right = 206.0
+offset_bottom = 158.0
+
+[node name="resumeButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 109.0
+offset_right = 217.0
+offset_bottom = 129.0
+texture_normal = ExtResource("2_gxlcq")
+texture_pressed = ExtResource("2_gxlcq")
+texture_hover = ExtResource("4_2kxv4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 62.0
+offset_right = 233.0
+offset_bottom = 92.0
+texture = ExtResource("3_eenbw")
+stretch_mode = 2

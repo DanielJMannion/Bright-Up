@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c36wo7uomkc2c"]
+
+[ext_resource type="Script" path="res://Assets/Objects/first_screne.gd" id="1_pety4"]
+[ext_resource type="AudioStream" uid="uid://bmi0loosuc52e" path="res://Assets/Audio/firstNoise.wav" id="2_ximl6"]
+[ext_resource type="AudioStream" uid="uid://21utdjkcphy5" path="res://Assets/Audio/secondNoise.wav" id="3_pgxdg"]
+[ext_resource type="Texture2D" uid="uid://dy21dlof7ae7k" path="res://Assets/Sprites/DanMadeThis.png" id="4_xq4og"]
+
+[node name="FirstScrene" type="ColorRect"]
+z_index = 10
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_pety4")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ximl6")
+volume_db = -15.0
+
+[node name="Audio 2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pgxdg")
+volume_db = -15.0
+
+[node name="Dan" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(192, 108)
+texture = ExtResource("4_xq4og")

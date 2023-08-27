@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc3kpfwaonvw0"]
+
+[ext_resource type="PackedScene" uid="uid://t4xvbbi8lf3g" path="res://Scenes/Levels/level 1.tscn" id="1_22cng"]
+
+[node name="level_2_3" instance=ExtResource("1_22cng")]
+
+[node name="TestRect" parent="." index="0"]
+visible = false
+
+[node name="TileMap" parent="." index="1"]
+layer_1/tile_data = PackedInt32Array(589829, 196609, 2, 524293, 196609, 0, 458758, 458753, 0, 524294, 458753, 1, 786441, 327681, 1, 851977, 327681, 2, 786442, 393217, 1, 851978, 393217, 2, 720907, 196609, 1, 786443, 196609, 1, 851979, 196609, 2, 655371, 196609, 1, 589835, 196609, 1, 524299, 196609, 1, 786444, 327681, 1, 851980, 327681, 2, 786445, 393217, 1, 851981, 393217, 2, 589841, 196609, 2, 524305, 196609, 0, 458768, 458753, 0, 524304, 458753, 1, 589833, 458753, 3, 589837, 458753, 3, 589830, 458753, 2, 589840, 458753, 2, 458763, 196609, 1, 393227, 196609, 0)
+
+[editable path="Area2D"]

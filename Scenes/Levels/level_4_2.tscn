@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://jm5p3rgthmly"]
+
+[ext_resource type="PackedScene" uid="uid://t4xvbbi8lf3g" path="res://Scenes/Levels/level 1.tscn" id="1_rg0js"]
+[ext_resource type="PackedScene" uid="uid://cjs5pgwgbt2od" path="res://Assets/Objects/light_spike.tscn" id="2_twhf4"]
+[ext_resource type="PackedScene" uid="uid://bdl0burn7nttp" path="res://Assets/Objects/dark_spike.tscn" id="3_0c7yr"]
+
+[node name="level_4_2" instance=ExtResource("1_rg0js")]
+
+[node name="TestRect" parent="." index="0"]
+visible = false
+
+[node name="TileMap" parent="." index="1"]
+layer_1/tile_data = PackedInt32Array(458760, 196609, 0, 524296, 196609, 1, 589832, 196609, 2, 524298, 458753, 1, 589834, 327681, 2, 589835, 327681, 3, 524300, 458753, 1, 589836, 393217, 2, 458762, 327681, 1, 458764, 393217, 1, 458763, 327681, 3, 524299, 458753, 3, 458766, 196609, 0, 524302, 196609, 1, 589838, 196609, 2, 720906, 1, 3, 720907, 65537, 3, 720908, 131073, 3)
+
+[node name="lightSpike" parent="Spikes" index="0" instance=ExtResource("2_twhf4")]
+position = Vector2(80, -48)
+rotation = 1.5708
+
+[node name="lightSpike2" parent="Spikes" index="1" instance=ExtResource("2_twhf4")]
+position = Vector2(-48, -16)
+rotation = -1.5708
+
+[node name="lightSpike3" parent="Spikes" index="2" instance=ExtResource("2_twhf4")]
+position = Vector2(-48, -48)
+rotation = -1.5708
+
+[node name="lightSpike4" parent="Spikes" index="3" instance=ExtResource("2_twhf4")]
+position = Vector2(-48, -32)
+rotation = -1.5708
+
+[node name="lightSpike5" parent="Spikes" index="4" instance=ExtResource("2_twhf4")]
+position = Vector2(80, -32)
+rotation = 1.5708
+
+[node name="lightSpike6" parent="Spikes" index="5" instance=ExtResource("2_twhf4")]
+position = Vector2(80, -16)
+rotation = 1.5708
+
+[node name="DarkSpike2" parent="Spikes" index="6" instance=ExtResource("3_0c7yr")]
+position = Vector2(16, 0)
+
+[editable path="Area2D"]

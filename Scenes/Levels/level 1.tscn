@@ -1,0 +1,52 @@
+[gd_scene load_steps=11 format=3 uid="uid://t4xvbbi8lf3g"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_pat3h"]
+[ext_resource type="PackedScene" uid="uid://sr5r0vuh1qyi" path="res://Assets/Objects/test_rect.tscn" id="2_6odbj"]
+[ext_resource type="PackedScene" uid="uid://8uoaeo2tf76o" path="res://Assets/Objects/level_tilemap.tscn" id="3_gkasr"]
+[ext_resource type="PackedScene" uid="uid://bgl28by6vs2py" path="res://Assets/Objects/player.tscn" id="6_haiep"]
+[ext_resource type="PackedScene" uid="uid://cytqsyc3hefnh" path="res://Assets/Objects/light.tscn" id="7_cmb8h"]
+[ext_resource type="PackedScene" uid="uid://betffp7n8g2gj" path="res://Assets/Objects/death_box.tscn" id="7_hjqqv"]
+[ext_resource type="PackedScene" uid="uid://circspvjtoj1e" path="res://Scenes/level_complete.tscn" id="8_7bwcq"]
+[ext_resource type="PackedScene" uid="uid://d2pw3aqyqcwgh" path="res://Assets/Objects/fake_loading.tscn" id="9_32ymy"]
+[ext_resource type="PackedScene" uid="uid://cr7wva2m3y0uq" path="res://Assets/Objects/level_end.tscn" id="9_jk6yx"]
+[ext_resource type="PackedScene" uid="uid://d3alkqk10cscf" path="res://Assets/Objects/pause.tscn" id="10_y8may"]
+
+[node name="Level 1" type="Node2D"]
+script = ExtResource("1_pat3h")
+
+[node name="TestRect" parent="." instance=ExtResource("2_6odbj")]
+
+[node name="TileMap" parent="." instance=ExtResource("3_gkasr")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(3, 3)
+
+[node name="Spikes" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(168, 168)
+
+[node name="Area2D" parent="." instance=ExtResource("7_hjqqv")]
+position = Vector2(192, 259)
+
+[node name="Player" parent="." instance=ExtResource("6_haiep")]
+position = Vector2(56, 152)
+
+[node name="Light" parent="." instance=ExtResource("7_cmb8h")]
+position = Vector2(56, 152)
+
+[node name="LevelEnd" parent="." instance=ExtResource("9_jk6yx")]
+position = Vector2(319, 144)
+
+[node name="LevelComplete" parent="." instance=ExtResource("8_7bwcq")]
+visible = false
+z_index = 5
+
+[node name="FakeLoading" parent="." instance=ExtResource("9_32ymy")]
+visible = false
+
+[node name="pauseScreen" parent="." instance=ExtResource("10_y8may")]
+visible = false
+z_index = 5
+
+[editable path="Area2D"]

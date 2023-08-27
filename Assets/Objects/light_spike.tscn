@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjs5pgwgbt2od"]
+
+[ext_resource type="Texture2D" uid="uid://w8oi6vhqt8ww" path="res://Assets/Sprites/lightSpike.png" id="1_pic1f"]
+[ext_resource type="PackedScene" uid="uid://betffp7n8g2gj" path="res://Assets/Objects/death_box.tscn" id="2_2a3cf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2eer"]
+size = Vector2(16, 16)
+
+[node name="lightSpike" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pic1f")
+
+[node name="DeathBox" parent="." instance=ExtResource("2_2a3cf")]
+disable_mode = 1
+collision_layer = 64
+collision_mask = 24
+
+[node name="CollisionShape2D" parent="DeathBox" index="0"]
+shape = SubResource("RectangleShape2D_g2eer")
+
+[editable path="DeathBox"]

@@ -1,0 +1,246 @@
+[gd_scene load_steps=8 format=3 uid="uid://2142nt4mcc7p"]
+
+[ext_resource type="Texture2D" uid="uid://dvip6ry7cj0bn" path="res://Assets/Sprites/Tutorial Box.png" id="1_e5mvi"]
+[ext_resource type="PackedScene" uid="uid://75ja0uousxhb" path="res://Assets/Objects/levelButton.tscn" id="2_xhnjt"]
+[ext_resource type="Texture2D" uid="uid://c6dd4i6bfkuln" path="res://Assets/Sprites/World 1 Box.png" id="3_87e0o"]
+[ext_resource type="Texture2D" uid="uid://c22mg4lpggliu" path="res://Assets/Sprites/World 2.png" id="4_8qq4p"]
+[ext_resource type="Texture2D" uid="uid://cippnssv5uex" path="res://Assets/Sprites/World 3.png" id="5_lfbvr"]
+[ext_resource type="Texture2D" uid="uid://blvay0g3niec4" path="res://Assets/Sprites/crown1.png" id="6_8klb8"]
+[ext_resource type="PackedScene" uid="uid://d2pw3aqyqcwgh" path="res://Assets/Objects/fake_loading.tscn" id="6_eqdtr"]
+
+[node name="Level Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(3, 3)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Tutorial" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -314.0
+offset_right = -815.0
+offset_bottom = -282.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="TutorialText" type="TextureRect" parent="Tutorial"]
+layout_mode = 2
+texture = ExtResource("1_e5mvi")
+stretch_mode = 2
+
+[node name="TutorialOne" parent="Tutorial" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_1_1"
+
+[node name="TutorialTwo" parent="Tutorial" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_1_2"
+metadata/NumberTexture = 1
+
+[node name="TutorialThree" parent="Tutorial" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_1_3"
+metadata/NumberTexture = 2
+
+[node name="TutorialFour" parent="Tutorial" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_1_4"
+metadata/NumberTexture = 3
+
+[node name="TutorialFive" parent="Tutorial" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_1_5"
+metadata/NumberTexture = 4
+
+[node name="World 1" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 65.0
+offset_right = 337.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="World 1 Text" type="TextureRect" parent="World 1"]
+layout_mode = 2
+texture = ExtResource("3_87e0o")
+stretch_mode = 2
+
+[node name="LevelOne" parent="World 1" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_2_1"
+
+[node name="LevelTwo" parent="World 1" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_2_2"
+metadata/NumberTexture = 1
+
+[node name="LevelThree" parent="World 1" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_2_3"
+metadata/NumberTexture = 2
+
+[node name="LevelFour" parent="World 1" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_2_4"
+metadata/NumberTexture = 3
+
+[node name="LevelFive" parent="World 1" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_2_5"
+metadata/NumberTexture = 4
+
+[node name="World 2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -204.0
+offset_right = -815.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="World 2 Text" type="TextureRect" parent="World 2"]
+layout_mode = 2
+texture = ExtResource("4_8qq4p")
+stretch_mode = 2
+
+[node name="LevelSix" parent="World 2" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_3_1"
+
+[node name="LevelSeven" parent="World 2" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_3_2"
+metadata/NumberTexture = 1
+
+[node name="LevelEight" parent="World 2" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_3_3"
+metadata/NumberTexture = 2
+
+[node name="LevelNine" parent="World 2" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_3_4"
+metadata/NumberTexture = 3
+
+[node name="LevelTen" parent="World 2" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_3_5"
+metadata/NumberTexture = 4
+
+[node name="World 3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -149.0
+offset_right = -815.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="TutorialText" type="TextureRect" parent="World 3"]
+layout_mode = 2
+texture = ExtResource("5_lfbvr")
+stretch_mode = 2
+
+[node name="TutorialOne" parent="World 3" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_4_1"
+
+[node name="TutorialTwo" parent="World 3" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_4_2"
+metadata/NumberTexture = 1
+
+[node name="TutorialThree" parent="World 3" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_4_3"
+metadata/NumberTexture = 2
+
+[node name="TutorialFour" parent="World 3" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_4_4"
+metadata/NumberTexture = 3
+
+[node name="TutorialFive" parent="World 3" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_4_5"
+metadata/NumberTexture = 4
+
+[node name="World 4" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -149.0
+offset_right = -826.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="TutorialText" type="TextureRect" parent="World 4"]
+layout_mode = 2
+texture = ExtResource("6_8klb8")
+stretch_mode = 2
+
+[node name="TutorialOne" parent="World 4" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_5_1"
+
+[node name="TutorialTwo" parent="World 4" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_5_2"
+metadata/NumberTexture = 1
+
+[node name="TutorialThree" parent="World 4" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_5_3"
+metadata/NumberTexture = 2
+
+[node name="TutorialFour" parent="World 4" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_5_4"
+metadata/NumberTexture = 3
+
+[node name="TutorialFive" parent="World 4" instance=ExtResource("2_xhnjt")]
+layout_mode = 2
+metadata/SceneChange = "level_5_5"
+metadata/NumberTexture = 4
+
+[node name="FakeLoading" parent="." instance=ExtResource("6_eqdtr")]
+visible = false
+layout_mode = 0
